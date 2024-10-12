@@ -35,6 +35,9 @@ source ~/ros2_ws/install/setup.bash
 ``` r
 ros2 launch ola_n84 sim.launch.py
 ```
+``` r
+ros2 run ola_n84 star_draw
+```
 ![](img/stardraw.gif)
 
 ## Graph
