@@ -9,7 +9,7 @@ public:
     StarDraw() : Node("star_draw"), count_(0)
     {
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
-        timer_ = this->create_wall_timer(std::chrono::milliseconds(10), std::bind(&StarDraw::loop, this));
+        timer_ = this->create_wall_timer(std::chrono::milliseconds(1), std::bind(&StarDraw::loop, this)); 
         RCLCPP_INFO_STREAM(this->get_logger(), "Drawing a star to turtlesim.");
         loop();
     }
